@@ -62,6 +62,13 @@ public class BasicController {
         return "basic/date";
     }
 
+    @GetMapping("/link")
+    public String link(Model model) {
+        model.addAttribute("param1", "data1");
+        model.addAttribute("param2", "data2");
+        return "basic/link";
+    }
+
 
     // 스프링 빈에 직접 접근할 수 있다.
     @Component("helloBean")
