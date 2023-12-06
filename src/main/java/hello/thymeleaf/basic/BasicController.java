@@ -82,6 +82,11 @@ public class BasicController {
         return "basic/operation";
     }
 
+    @GetMapping("/attribute")
+    public String attribute() {
+        return "basic/attribute";
+    }
+
     // 스프링 빈에 직접 접근할 수 있다.
     @Component("helloBean")
     static class HelloBean {
