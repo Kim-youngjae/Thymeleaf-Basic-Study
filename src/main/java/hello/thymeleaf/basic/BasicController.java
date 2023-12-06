@@ -115,6 +115,12 @@ public class BasicController {
         model.addAttribute("users", list);
     }
 
+    @GetMapping("/block")
+    public String block(Model model) {
+        addUsers(model);
+        return "basic/block";
+    }
+
     // 스프링 빈에 직접 접근할 수 있다.
     @Component("helloBean")
     static class HelloBean {
