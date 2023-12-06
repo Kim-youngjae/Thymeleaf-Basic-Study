@@ -69,6 +69,12 @@ public class BasicController {
         return "basic/link";
     }
 
+    @GetMapping("/literal")
+    public String literal(Model model) {
+        model.addAttribute("data", "Spring!");
+        return "/basic/literal";
+    }
+
 
     // 스프링 빈에 직접 접근할 수 있다.
     @Component("helloBean")
