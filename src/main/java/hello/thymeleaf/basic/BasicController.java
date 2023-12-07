@@ -121,6 +121,13 @@ public class BasicController {
         return "basic/block";
     }
 
+    @GetMapping("/javascript")
+    public String javascript(Model model) {
+        model.addAttribute("user", new User("userA", 10));
+        addUsers(model);
+        return "basic/javascript";
+    }
+
     // 스프링 빈에 직접 접근할 수 있다.
     @Component("helloBean")
     static class HelloBean {
